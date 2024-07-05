@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      button {
+        height: 64px;
+        width: 64px;
+        background-color: rgb(50, 50, 50);
+        color: white;
+        border-radius: 35px;
+        border-style: solid;
+        font-size: 25px;
+        margin-right: 2px;
+        margin-bottom: -3px;
+      }
+
+      button:active:not(.operation-button) {   
+        background-color: rgb(30, 30, 30);
+        transition: 0.15s;
+      }
+
+      button:hover:not(.operation-button) {
+        opacity: 0.7;
+      }
+
+      .operation-button {
+        background-color: orange;
+      }
+
+      .operation-button:hover {
+        background-color: rgb(228, 194, 131);
+        transition: 0.1s;
+      }
+
+      .operation-button:active {
+        background-color: white;
+        transition: 0.1s;
+      }
+
+      .clear-button{
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="number-rows">
+      <button onclick="
+        calculator += '1';
+        console.log(calculator);
+      ">1</button>
+
+      <button onclick="
+        calculator += '2';
+        console.log(calculator);
+      ">2</button>
+
+      <button onclick="
+        calculator += '3';
+        console.log(calculator);
+      ">3</button>
+
+      <button class="operation-button" onclick="
+        calculator += ' + ';
+        console.log(calculator);
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculator += '4';
+        console.log(calculator);
+      ">4</button>
+
+      <button onclick="
+        calculator += '5';
+        console.log(calculator);
+      ">5</button>
+
+      <button onclick="
+        calculator += '6';
+        console.log(calculator);
+      ">6</button>
+
+      <button class="operation-button" onclick="
+        calculator += ' - ';
+        console.log(calculator);
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculator += '7';
+        console.log(calculator);
+      ">7</button>
+
+      <button onclick="
+        calculator += '8';
+        console.log(calculator);
+      ">8</button>
+
+      <button onclick="
+        calculator += '9';
+        console.log(calculator);
+      ">9</button>
+
+      <button class="operation-button" onclick="
+        calculator += ' * ';
+        console.log(calculator);
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculator += '0';
+        console.log(calculator);
+      ">0</button>
+
+      <button onclick="
+        calculator += '.';
+        console.log(calculator);
+      ">.</button>
+
+      <button onclick="
+        calculator = eval(calculator);
+        console.log(calculator);
+      ">=</button>
+
+      <button class="operation-button" onclick="
+        updateCalculation ('7');
+      ">/</button>
+    </p>
+
+
+    <button class="clear-button" onclick="
+      calculator = 0;
+      console.log('Cleared. ');
+      console.log(calculator);
+    ">Clear</button>
+    <script>
+      let calculator = '';
+
+      // функция updateCalculation с параметром value. value равен  значеиню в скобках updateCalculation(). далее решается calculator += '7'; или '' + 7 или updateCalculation += value;. в конце результат выводится в консоль. 
+
+      //в коде выше, чтобы вызвать функцию, я пишу просто updateCalculation('7') в скобочках пишется цийфра или знак.
+      function updateCalculation (value) {
+        updateCalculation += value;
+        console.log(updateCalculation);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Layout Techniquie</title>
+    <style>
+      p {
+        font-family: Roboto, Arial;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      
+      .input-elem {
+        display: block;
+      }
+
+      .video-name {
+        margin-top: 0;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 12px;
+      }
+
+      .video-thumbnail {
+        width: 100%;
+        display: block;
+      }
+
+      .video-preview {
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+      }
+
+      .video-info-grid {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+      }
+
+      .profile-picture{
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+      }
+
+      .thumbnail-row {
+        margin-bottom: 10px;
+      }
+
+      .channel-name,
+      .video-description {
+        font-size: 12px;
+        color: rgb(96, 96, 96);
+      }
+
+      .channel-name {
+        margin-bottom: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <input class="input-elem" placeholder="Search">
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="video-thumbnail" src="/images/muzik.webp">        
+      </div>
+      <div class="video-info-grid">
+        <div class="channel-picture"> <!--inline block-->
+          <img class="profile-picture" src="/images/cat1.jpeg">
+        </div>
+        <div class="video-info"> <!--inline block-->
+          <p class="video-name">
+            How to access the DARK WEB in 2024 (3 levels)
+          </p>
+    
+          <p class="channel-name">
+            NetworkChuck
+          </p>
+    
+          <p class="video-description">
+            3.6M views &#183; 8 months ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="video-thumbnail" src="/images/muzik.webp">        
+      </div>
+      <div class="video-info-grid">
+        <div class="channel-picture"> <!--inline block-->
+          <img class="profile-picture" src="/images/cat1.jpeg">
+        </div>
+        <div class="video-info"> <!--inline block-->
+          <p class="video-name">
+            How to access the DARK WEB in 2024 (3 levels)
+          </p>
+    
+          <p class="channel-name">
+            NetworkChuck
+          </p>
+    
+          <p class="video-description">
+            3.6M views &#183; 8 months ago
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

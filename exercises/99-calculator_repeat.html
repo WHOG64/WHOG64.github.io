@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="
+      updateScore('1')">
+      1</button>
+
+      <button onclick="
+      updateScore('2')">
+      2</button>
+
+      <button onclick="
+      updateScore('3')">
+      3</button>
+
+      <button onclick="
+      updateScore(' + ')">
+      +</button>
+    </p>
+
+    <p>
+      <button onclick="
+      updateScore('4')">
+      4</button>
+
+      <button onclick="
+      updateScore('5')">
+      5</button>
+
+      <button onclick="
+      updateScore('6')">
+      6</button>
+
+      <button onclick="
+      updateScore(' - ')">
+      -</button>
+
+    <p>
+      <button onclick="
+      updateScore('7')">
+      7</button>
+
+      <button onclick="
+      updateScore('8')">
+      8</button>
+
+      <button onclick="
+      updateScore('9')">
+      9</button>
+
+      <button onclick="
+      updateScore(' * ')">
+      *</button>
+    </p>
+
+    <p>
+      <button onclick="
+      updateScore('0')">
+      0</button>
+
+      <button onclick="
+      updateScore('.')">
+      .</button>
+
+      <button onclick="
+      calculation = eval(calculation);
+      console.log(calculation);">
+      =</button>
+
+      <button onclick="
+      updateScore(' / ')">
+      /</button>
+    </p>
+
+    <p>
+      <button onclick="
+      calculation = '';
+      console.log('Cleared');
+      ">Clear</button>
+    </p>
+
+    <script>
+      let calculation = '';      
+
+      function updateScore(value){
+        calculation += value;
+        console.log(calculation);
+      }
+    </script>
+  </body>
+</html>

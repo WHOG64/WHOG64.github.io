@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects exercises</title>
+  </head>
+  <body>
+    <script>
+      /*
+      const products = {
+        bascetball: 2095,
+      };
+      products.bascetball = 500;
+
+      products.deliveryTime = '3 days';
+      console.log(products);
+
+      function comparePrice(product1, product2) {
+        if (product1.price < product2.price) {
+          return product1
+        } else {
+          return product2
+        }
+      }
+
+      const product1 = {
+        name : 'scissors',
+        price : 20000
+      };
+
+      const product2 ={
+        name : 'basketball',
+        price : 2060
+      };
+
+      const cheaperPrice = comparePrice(product1, product2);
+
+      console.log(cheaperPrice);
+      */
+
+      function isSameProduct(product1, product2) {
+        return (
+          product1.price === product2.price &&  
+          product1.name === product2.name
+        )
+      }
+      
+      const product1 = {
+        name : 'scissors',
+        price : 20000
+      };
+
+      const product2 ={
+        name : 'basketball',
+        price : 2060
+      };
+
+      console.log(isSameProduct(product1, product2));
+
+      let text = 'Good Morning!'
+      let result = text.repeat(3);
+      console.log(result);
+    </script>
+  </body>
+</html>
